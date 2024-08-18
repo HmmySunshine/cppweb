@@ -365,7 +365,7 @@ if(OATPP_LINK_TEST_LIBRARY)
 	set_target_source_groups(oatpp-test STRIP_PREFIX oatpp-test)
 
 	set_target_properties(oatpp-test PROPERTIES
-			CXX_STANDARD 11
+			CXX_STANDARD 17
 			CXX_EXTENSIONS OFF
 			CXX_STANDARD_REQUIRED ON
 	)

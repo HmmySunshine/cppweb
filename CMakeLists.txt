@@ -11,6 +11,12 @@ set(OATPP_THIS_MODULE_NAME oatpp) ## name of the module (also name of folders in
 set(OATPP_THIS_MODULE_VERSION ${oatpp_VERSION}) ## version of the module (also sufix of folders in installation dirs)
 
 ###################################################################################################
+# 创建可执行文件
+add_executable(my_oatpp_app src/oatpp/main.cpp)
+target_link_libraries(my_oatpp_app PRIVATE oatpp)
+
+# 设置C++标准
+target_compile_options(my_oatpp_app PRIVATE /std:c++17)
 
 project(oatpp VERSION ${OATPP_THIS_MODULE_VERSION} LANGUAGES CXX)
 
@@ -130,6 +136,7 @@ if(OATPP_BUILD_TESTS)
     enable_testing()
     add_subdirectory(test)
 endif()
+
 
 
 include(cpack.cmake)

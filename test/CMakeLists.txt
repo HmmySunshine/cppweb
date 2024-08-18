@@ -130,6 +130,7 @@ add_executable(oatppAllTests
         oatpp/AllTestsMain.cpp
         oatpp/LoggerTest.cpp
         oatpp/LoggerTest.hpp
+        
 )
 set_target_source_groups(oatppAllTests STRIP_PREFIX "oatpp")
 
